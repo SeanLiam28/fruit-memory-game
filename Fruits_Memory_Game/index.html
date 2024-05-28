@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memory Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+
+  
+</head>
+<body>
+  <div class="cover">
+    <h1 class="fruits">Fruits Memory Game</h1>
+    <button onclick="playGame()">Play Game</button>
+  </div>
+
+  <audio id="clickSound" src="effects.mp3"></audio>
+  <audio id="backgroundMusic" src="background.mp3" loop></audio>
+  <script>
+    function playGame() {
+      window.location.href = "cover.html"; // Navigate to index.html when button is clicked
+    }
+  </script>
+</body>
+</html>

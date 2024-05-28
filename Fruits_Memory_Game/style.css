@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url("./assets/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1.fruits {
+  font-family: "Jaro", sans-serif;
+  background-color: #fff;
+
+  font-size: 150px; /* Large font size */
+  color: #fff; /* White color for contrast against background */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow for better readability */
+  -webkit-text-stroke: 0.1px rgb(0, 0, 0); /* Adds a black outline to the text */
+  margin-bottom: 0px; /* Space between the header and the game board */
+  text-align: center; /* Center-align the text */
+  padding: 10px 20px; /* Padding around the text */
+  border-radius: 40px; /* Rounded corners */
+  margin-bottom: 30px;
+}
+.game {
+  max-width: 700px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+
+}
+
+.card {
+
+  width: 100px;
+  height: 100px;
+  background: #ffffff;
+  border-radius: 10px;
+  position: relative;
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+  border: 2px solid #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.card .front,
+.card .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  background-position: center;
+  background-size: 70% 70%;
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+}
+
+.card .back {
+  transform: rotateY(180deg);
+}
+
+.card .front {
+  background-image: url("./assets/back.png");
+}
+
+.card.flip {
+  transform: rotateY(180deg);
+}
+
+
+button {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 10px 20px;
+  font-size: 24px;
+  cursor: pointer;
+  display: block; /* Ensure button behaves as a block element */
+  margin: 0 auto; /* Center the button horizontally */
+  font-weight: bold;
+  border-radius: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Hover effect */
+button:hover {
+  background-color: #0056b3;
+}
+
+#timer {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Styles for popup */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: none;
+}
+
+.popup h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.popup button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.popup button:hover {
+  background-color: #0056b3;
+}
